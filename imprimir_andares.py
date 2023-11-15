@@ -16,6 +16,8 @@ import time
 andares = 20
 
 def imprimir_andares_com_for(andares):
+    print("Imprimindo com a estrutura for: \n")
+    
     for andar in range(andares):
         if andar != 13:
             print(f"O andar é {andar}")
@@ -23,6 +25,9 @@ def imprimir_andares_com_for(andares):
             
 def imprimir_andares_com_while(andares):
     andar = 0
+    
+    print("Imprimindo com a estrutura while: \n")
+    
     while andar < andares:
         if andar != 13:
             print(f"O andar é {andar}")
@@ -30,12 +35,16 @@ def imprimir_andares_com_while(andares):
         andar += 1
         
 def imprimir_andares_com_for_decrescente(andares):
+    print("Imprimindo com a estrutura for decrescente: \n")
+    
     for andar in range(andares, 0, -1):
         if andar != 13:
             print(f"O andar é {andar}")
             time.sleep(1)
             
 def imprimir_andares_com_while_decrescente(andares):
+    print("Imprimindo com a estrutura while decrescente: \n")
+    
     andar = andares
     while andar > 0:
         if andar != 13:
@@ -44,6 +53,8 @@ def imprimir_andares_com_while_decrescente(andares):
         andar -= 1
         
 def imprimir_andares_com_for_pares(andares):
+    print("Imprimindo com a estrutura for pares: \n")
+    
     for andar in range(0, andares, 2):
         if andar != 13:
             print(f"O andar é {andar}")
