@@ -11,6 +11,7 @@ Trabalhe esse código em seu IDE, suba ele para sua conta no GitHub e compartilh
 no campo ao lado para que outros desenvolvedores possam analisá-lo.
 
 """
+import time
 
 andares = 20
 
@@ -18,30 +19,35 @@ def imprimir_andares_com_for(andares):
     for andar in range(andares):
         if andar != 13:
             print(f"O andar é {andar}")
+            time.sleep(1)
             
 def imprimir_andares_com_while(andares):
     andar = 0
     while andar < andares:
         if andar != 13:
             print(f"O andar é {andar}")
+            time.sleep(1)
         andar += 1
         
 def imprimir_andares_com_for_decrescente(andares):
     for andar in range(andares, 0, -1):
         if andar != 13:
             print(f"O andar é {andar}")
+            time.sleep(1)
             
 def imprimir_andares_com_while_decrescente(andares):
     andar = andares
     while andar > 0:
         if andar != 13:
             print(f"O andar é {andar}")
+            time.sleep(1)
         andar -= 1
         
 def imprimir_andares_com_for_pares(andares):
     for andar in range(0, andares, 2):
         if andar != 13:
             print(f"O andar é {andar}")
+            time.sleep(1)
             
 
 def escolher_impressao():
