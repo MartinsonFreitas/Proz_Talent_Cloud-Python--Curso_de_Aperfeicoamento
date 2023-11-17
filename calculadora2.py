@@ -32,15 +32,20 @@ def menu():
     
 def operacoes(n1, n2, op):
     if op == 1:
-        return n1 + n2
+        resultado =  n1 + n2
     elif op == 2:
-        return n1 - n2
+        resultado = n1 - n2
     elif op == 3:
-        return n1 * n2
+        resultado = n1 * n2
     elif op == 4:
-        return n1 / n2
+        if n2 != 0: 
+            resultado = n1 / n2
+        else:
+            raise Exception('Não é possível dividir por zero')
     else:
-        return 0    
+        raise Exception('Essa opção não existe')
+    
+    return resultado    
     
 def main():
     while True:
@@ -53,8 +58,13 @@ def main():
             continue
         n1 = int(input('\tDigite o primeiro número: '))
         n2 = int(input('\tDigite o segundo número: '))
-        resultado = operacoes(n1, n2, op)
-        print(f'\tO resultado da operação é {resultado:,.2f}')
+        
+        try:
+            resultado = operacoes(n1, n2, op)
+            print(f'\tO resultado da operação é {resultado:,.2f}')
+        except Exception as error:
+            print(f'\tErro: {error}')
+            continue
         
 if __name__ == '__main__':
     main()
